@@ -340,20 +340,6 @@ export function WhyChooseUs() {
       <div className="relative w-full max-w-6xl mx-auto box-border">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14 px-2">
-          {/* Top Pill Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3.5 shadow-xs"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600" />
-            </span>
-            <span>Why Choose Us</span>
-          </motion.div>
 
           {/* Heading with Responsive Typography Clamps */}
           <motion.h2
