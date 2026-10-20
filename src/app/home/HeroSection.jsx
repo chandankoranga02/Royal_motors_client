@@ -134,17 +134,7 @@ export function HeroSection() {
             animate="visible"
             className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left lg:col-span-7 space-y-6"
           >
-            {/* Top Pill / Badge */}
-            <motion.div variants={itemFadeUp}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-semibold">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600" />
-                </span>
-                <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                <span>Admissions Open 2026-27 • Global Medical Colleges</span>
-              </div>
-            </motion.div>
+            
 
             {/* Headline with Typewriter Animation */}
             <motion.div variants={itemFadeUp} className="space-y-3">
