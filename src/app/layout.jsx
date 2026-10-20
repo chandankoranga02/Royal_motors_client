@@ -1,12 +1,20 @@
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-plus-jakarta",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+  weight: ["500", "600", "700", "800", "900"],
 });
 
 export const viewport = {
@@ -15,23 +23,27 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Royal Motors | Elite Supercar & Prestige Automobile Platform",
+  title: "MBBS in Abroad | Top Medical Universities, NMC & WHO Approved",
   description:
-    "Experience the world's most distinguished hypercars and luxury grand tourers. White-glove concierge, runway delivery, and bespoke membership.",
+    "Pursue MBBS in Abroad with direct admissions in top-ranked government medical universities. 100% English medium, affordable tuition, and complete visa assistance.",
   keywords: [
-    "Luxury Car Rental",
-    "Hypercar Club",
-    "Royal Motors",
-    "Exotic Supercars",
-    "Bespoke Chauffeur",
+    "MBBS in Abroad",
+    "Study MBBS Abroad",
+    "MBBS in Russia",
+    "MBBS in Uzbekistan",
+    "MBBS in Georgia",
+    "NMC Approved Medical Universities",
   ],
-  authors: [{ name: "Royal Motors International" }],
+  authors: [{ name: "Royal EduMed International" }],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} dark antialiased`}>
-      <body className="min-h-screen bg-obsidian-950 text-silver-light selection:bg-electric-cyan selection:text-slate-950 flex flex-col font-sans">
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${outfit.variable} antialiased`}
+    >
+      <body className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white flex flex-col font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
