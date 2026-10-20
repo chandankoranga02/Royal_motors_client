@@ -1,15 +1,10 @@
 "use client";
 
-import React, { ButtonHTMLAttributes, forwardRef } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
+import React, { forwardRef } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "amber";
-  size?: "sm" | "md" | "lg";
-}
-
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef(
   ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
     const baseStyles =
       "relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#030407] disabled:opacity-50 disabled:pointer-events-none select-none overflow-hidden cursor-pointer";
@@ -33,24 +28,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       lg: "h-14 px-8 text-base tracking-wide font-semibold",
     };
 
-    // Cast motion button to accept ref properly
-    const MotionButton = motion.button as React.ComponentType<
-      HTMLMotionProps<"button"> & { ref?: React.Ref<HTMLButtonElement> }
-    >;
-
     return (
-      <MotionButton
+      <motion.button
         ref={ref}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
         className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
-        {...(props as HTMLMotionProps<"button">)}
+        {...props}
       >
         <span className="relative z-10 flex items-center gap-2">{children}</span>
         {variant === "primary" && (
           <span className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         )}
-      </MotionButton>
+      </motion.button>
     );
   }
 );

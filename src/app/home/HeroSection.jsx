@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Sparkles,
   ArrowRight,
-  Shield,
   Gauge,
   Zap,
   Flame,
   ChevronRight,
   Play,
+  Home,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -21,21 +21,7 @@ import {
   antiGravityFloat,
 } from "@/lib/animations/motionVariants";
 
-interface CarSpec {
-  id: string;
-  name: string;
-  edition: string;
-  acceleration: string;
-  topSpeed: string;
-  power: string;
-  category: string;
-  colorName: string;
-  accentColor: string;
-  tagline: string;
-  gradient: string;
-}
-
-const FEATURED_CARS: CarSpec[] = [
+const FEATURED_CARS = [
   {
     id: "phantom-gt",
     name: "Royal Apex GT-R",
@@ -104,10 +90,14 @@ export function HeroSection() {
         >
           {/* Left Column: Staggered Content & Call To Actions */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
-            {/* Top Premium Badge */}
-            <motion.div variants={fadeInUp}>
+            {/* Top Routing Test Badge */}
+            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-2">
               <Badge variant="cyan">
-                <Sparkles className="w-3.5 h-3.5 text-electric-cyan" />
+                <Home className="w-3.5 h-3.5 text-electric-cyan" />
+                ... Homepage
+              </Badge>
+              <Badge variant="silver">
+                <Sparkles className="w-3.5 h-3.5 text-silver-metallic" />
                 Next-Generation Automotive Luxury
               </Badge>
             </motion.div>

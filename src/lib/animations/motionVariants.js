@@ -1,9 +1,7 @@
-import { Variants } from "framer-motion";
-
 /**
  * Container variant with staggered child orchestration
  */
-export const staggerContainer: Variants = {
+export const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -17,7 +15,7 @@ export const staggerContainer: Variants = {
 /**
  * Stagger variant with slightly longer delays for rich hero reveals
  */
-export const heroStagger: Variants = {
+export const heroStagger = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -31,7 +29,7 @@ export const heroStagger: Variants = {
 /**
  * Fade up transition variant for typography & buttons
  */
-export const fadeInUp: Variants = {
+export const fadeInUp = {
   hidden: {
     opacity: 0,
     y: 28,
@@ -49,7 +47,7 @@ export const fadeInUp: Variants = {
 /**
  * Fade in scale for visual cards and automotive showcases
  */
-export const fadeInScale: Variants = {
+export const fadeInScale = {
   hidden: {
     opacity: 0,
     scale: 0.92,
@@ -70,7 +68,7 @@ export const fadeInScale: Variants = {
  * Anti-gravity / floating hover variant
  * Simulates weightless luxury motion
  */
-export const antiGravityFloat: Variants = {
+export const antiGravityFloat = {
   animate: {
     y: [-8, 8, -8],
     rotate: [-0.5, 0.5, -0.5],
@@ -85,7 +83,7 @@ export const antiGravityFloat: Variants = {
 /**
  * Background glow pulse animation
  */
-export const ambientGlow: Variants = {
+export const ambientGlow = {
   animate: {
     scale: [1, 1.15, 1],
     opacity: [0.35, 0.65, 0.35],

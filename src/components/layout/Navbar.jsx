@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, Compass, Car, PhoneCall, Menu, X } from "lucide-react";
+import { ShieldCheck, Compass, Car, PhoneCall, Menu, X, GraduationCap, Info, Home } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
@@ -19,10 +19,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Fleet", href: "#fleet", icon: Car },
-    { label: "Experience", href: "#experience", icon: Compass },
-    { label: "Concierge", href: "#concierge", icon: ShieldCheck },
-    { label: "Contact", href: "#contact", icon: PhoneCall },
+    { label: "Home", href: "/", icon: Home },
+    { label: "University", href: "/university", icon: GraduationCap },
+    { label: "About Us", href: "/about-us", icon: Info },
+    { label: "Contact Us", href: "/contact-us", icon: PhoneCall },
   ];
 
   return (

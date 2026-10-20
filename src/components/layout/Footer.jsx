@@ -93,14 +93,20 @@ export function Footer() {
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-silver-chrome/60 gap-4">
           <p>© 2026 Royal Motors International Inc. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#privacy" className="hover:text-silver-light">
-              Privacy Charter
+            <Link href="/about-us" className="hover:text-silver-light">
+              About Us
             </Link>
-            <Link href="#terms" className="hover:text-silver-light">
-              Terms of Escort
+            <Link href="/university" className="hover:text-silver-light">
+              University
             </Link>
-            <Link href="#security" className="hover:text-silver-light">
-              Security Protocol
+            <Link href="/contact-us" className="hover:text-silver-light">
+              Contact Us
+            </Link>
+            <Link href="/privacy-policy" className="hover:text-silver-light">
+              Privacy & Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-silver-light">
+              Terms & Conditions
             </Link>
           </div>
         </div>
